@@ -63,7 +63,8 @@ require_once 'conf.php';
                     requestTokenUrl           :   '<?= BASE_URL ?>/paiement.php',
                     method              :   'POST',
                     headers             :   {
-                        "Accept"          :    "text/html"
+                        "Accept"          :    "text/html",
+                        "Access-Control-Allow-Origin" : "https://payexpresse.com/api/paiement.php"
                     },
                     prensentationMode   :   PayExpresse.OPEN_IN_POPUP,
                     didPopupClosed: function (is_completed, success_url, cancel_url) {
@@ -72,6 +73,7 @@ require_once 'conf.php';
                     willGetToken        :   function () {
                         console.log("Je me prepare a obtenir un token");
                         selector.prop('disabled', true);
+                        console.log('c bon');
                     },
                     didGetToken         : function (token, redirectUrl) {
                         console.log("Mon token est : " +  token  + ' et url est ' + redirectUrl );

@@ -25,9 +25,6 @@
             cursor: pointer;
             border: 0;
         }
-
-
-
         .wrapper{
             display: inline-block;
             width: 190px;
@@ -86,7 +83,9 @@
             requestTokenUrl           :   '<?= BASE_URL ?>/paiement.php',
             method              :   'POST',
             headers             :   {
-              "Accept"          :    "text/html"
+              "Accept"          :    "text/html",
+              "Access-Control-Allow-Origin" : "https://sensoin.alwaysdata.net",
+              "Access-Control-Allow-Methods": "GET, DELETE, HEAD, OPTIONS"
             },
             prensentationMode   :   PayExpresse.OPEN_IN_POPUP,
             didPopupClosed: function (is_completed, success_url, cancel_url) {
