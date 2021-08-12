@@ -3,7 +3,7 @@ require_once 'conf.php';
 ?>
 
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 
 <!-- Mirrored from demo.angelostudio.net/1e-shop/1.3/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 24 Mar 2018 10:14:44 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
