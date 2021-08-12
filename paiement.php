@@ -14,6 +14,7 @@ $id = !empty($_POST['item_id']) ? intval($_POST['item_id']) : null;
 $items = json_decode(file_get_contents('article.json'), true)['articles'];
 $key = array_search($id, array_column($items, 'id'));
 
+
 if($key === false || $id === null)
 {
     echo json_encode([

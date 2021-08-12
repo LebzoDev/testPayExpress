@@ -53,7 +53,7 @@ require_once 'conf.php';
     <script>
         function buy(btn) {
             $('.close-modal').click();
-
+           
             setTimeout(function () {
                 var selector = pQuery(btn);
 
@@ -63,8 +63,8 @@ require_once 'conf.php';
                     requestTokenUrl           :   '<?= BASE_URL ?>/paiement.php',
                     method              :   'POST',
                     headers             :   {
-                        "Accept"          :    "text/html",
-                        "Access-Control-Allow-Origin" : "https://payexpresse.com/api/paiement.php"
+                        "Accept"          :    "text/html"
+                        // "Access-Control-Allow-Origin" : "https://payexpresse.com/api/"
                     },
                     prensentationMode   :   PayExpresse.OPEN_IN_POPUP,
                     didPopupClosed: function (is_completed, success_url, cancel_url) {
@@ -80,7 +80,8 @@ require_once 'conf.php';
                         selector.prop('disabled', false);
                     },
                     didReceiveError: function (error) {
-                        alert('erreur inconnu', error.toString());
+                        console.log("Erreur : " + error);
+                        //alert('erreur inconnu', error.toString());
                         selector.prop('disabled', false);
                     },
                     didReceiveNonSuccessResponse: function (jsonResponse) {
